@@ -27,8 +27,7 @@
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
-			o.Albedo.r = IN.worldPos.y * 0.5 + 0.5;
-			o.Albedo.b = IN.worldPos.y * -0.5 + 0.5;
+			o.Albedo.brg = IN.worldPos.xyz * 0.5 + 0.5;
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
 			o.Alpha = 1;
