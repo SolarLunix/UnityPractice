@@ -104,8 +104,9 @@ public class Graph : MonoBehaviour
         pos.Value.x = u;
         pos.Value.z = v;
 
-
-        float y = Mathf.Sin(pi * (u + t));
+        float y = Mathf.Sin(Mathf.PI * (u + t));
+        y += Mathf.Sin(2f * Mathf.PI * (u + 2f * t)) / 2f;
+        y *= 2f / 3f;
         pos.Value.y = y;
 
         return pos;
@@ -115,7 +116,6 @@ public class Graph : MonoBehaviour
     {
         pos.Value.x = u;
         pos.Value.z = v;
-
 
         float y = 4f * Mathf.Sin(pi * (u + v + t * 0.5f));
         y += Mathf.Sin(pi * (u + t));
@@ -168,9 +168,11 @@ public class Graph : MonoBehaviour
         float r1 = 0.65f + Mathf.Sin(pi * (6f * u + t)) * 0.1f;
         float r2 = 0.2f + Mathf.Sin(pi * (4f * v + t)) * 0.05f;
         float s = r2 * Mathf.Cos(pi * v) + r1;
+
         pos.Value.x = s * Mathf.Sin(pi * u);
         pos.Value.y = r2 * Mathf.Sin(pi * v); 
         pos.Value.z = s * Mathf.Cos(pi * u);
+
         return pos;
     }
 }

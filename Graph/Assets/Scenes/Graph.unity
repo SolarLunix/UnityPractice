@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbd95dab93d40cc458fb91879d85886d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 7
+  function: 2
   mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   material: {fileID: 2100000, guid: 478d50414780b4f4091faa66accdcdb2, type: 2}
   resolution: 100
